@@ -727,3 +727,7 @@ img::-moz-selection {
 body {
   webkit-tap-highlight-color: #fed136;
 }
+.price-li {
+  font-size: 32px;
+  list-style-type: none;
+}
