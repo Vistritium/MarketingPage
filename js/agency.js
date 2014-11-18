@@ -13,7 +13,24 @@ $(function() {
         }, 1500, 'easeInOutExpo');
         event.preventDefault();
     });
+
+    google.maps.event.addDomListener(window, 'load', initializeMaps);
+
 });
+
+function initializeMaps(){
+    var mapCanvas = document.getElementById('map-canvas');
+    var mapOptions = {
+        center: new google.maps.LatLng(51.747376, 19.453684),
+        zoom: 15,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+    }
+    var map = new google.maps.Map(mapCanvas, mapOptions);
+    var marker = new google.maps.Marker({
+        position: new google.maps.LatLng(51.747376, 19.453684),
+        map: map
+    });
+}
 
 // Highlight the top nav as scrolling occurs
 $('body').scrollspy({

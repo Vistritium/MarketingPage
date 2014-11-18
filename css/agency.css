@@ -50,6 +50,10 @@ h6 {
 .bg-darkest-gray {
   background-color: #222222;
 }
+#map-canvas {
+  width: inherit;
+  height: 400px;
+}
 .btn-primary {
   color: white;
   background-color: #3636fe;
